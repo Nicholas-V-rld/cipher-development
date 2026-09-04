@@ -1,1 +1,9 @@
-.vercel
+# Dependencies and generated builds
+node_modules/
+.next/
+.vercel/
+
+# Environment files and local editor state
+.env*
+!.env.example
+.DS_Store

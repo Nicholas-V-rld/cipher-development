@@ -1,0 +1,11 @@
+import Image from "next/image";
+
+export const metadata = { title: "About" };
+
+const people = [
+  { initials: "OD", image: "/team/daniel-oyinloluwa.png", name: "Daniel Oyinloluwa", role: "Founder & Product/Engineering Lead", bio: "Turns unclear requirements and unstable prototypes into focused production systems. Daniel leads discovery, architecture and technical quality across AI-integrated SaaS, payments, data systems and automation." },
+  { initials: "GD", image: "/team/gabriel-dosunmu.png", name: "Gabriel Dosunmu", role: "Full-Stack Product Engineer", bio: "Designs and ships modern applications across real estate, construction, fintech, marketing and education, including LLM integrations, CI/CD and post-launch optimization." },
+  { initials: "DA", image: "/team/daniels.png", name: "Daniels", role: "WordPress & Web Systems Engineer", bio: "Builds and recovers WordPress beyond drag-and-drop templates: custom themes, ACF, REST APIs, headless frontends, WooCommerce and difficult recovery work." },
+];
+
+export default function AboutPage(){return <><section className="page-hero section-shell"><p className="eyebrow">About Cipher</p><h1>Accountable specialists, working as one delivery team.</h1><p>We are a Lagos-based product-engineering and applied-AI company serving founders, agencies and growing teams internationally.</p></section><section className="section-shell about-statement"><p>Our job is not to make technology look impressive. It is to make a product or workflow reliable enough for a business to depend on—and clear enough for the client to own.</p></section><section className="section-shell people-list">{people.map(({initials,image,name,role,bio})=><article key={name}><div className="portrait">{image ? <Image src={image} alt={`${name}, ${role}`} fill sizes="(max-width: 680px) 100vw, 320px" /> : initials}</div><div><p className="eyebrow">{role}</p><h2>{name}</h2><p>{bio}</p></div></article>)}</section><section className="location-band"><div><p className="eyebrow light">Based in Lagos · Working globally</p><h2>Built for clear work across borders.</h2><p>Engagements receive agreed overlap windows, response expectations, milestone cadence and release coverage.</p></div></section></>}

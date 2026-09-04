@@ -1,0 +1,8 @@
+.portrait {
+  position: relative;
+}
+
+.portrait img {
+  object-fit: cover;
+  object-position: center 34%;
+}

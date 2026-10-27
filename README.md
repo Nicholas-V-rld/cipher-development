@@ -1,5 +1,7 @@
 # Cipher Development Website
 
+> Built by Daniel Oyinloluwa and Nicholas V. as a team.
+
 Production-oriented Next.js App Router website for Cipher Development.
 
 ## Run locally
